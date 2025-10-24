@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
+  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -25,6 +27,9 @@ export default function Index() {
                   {item}
                 </button>
               ))}
+              <Button onClick={() => navigate("/catalog")} variant="default" size="sm">
+                Каталог сортов
+              </Button>
             </div>
           </div>
         </div>
