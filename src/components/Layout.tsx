@@ -15,7 +15,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { path: "/puer", label: "Пуэр" },
     { path: "/ceremony", label: "Церемония" },
     { path: "/benefits", label: "Польза" },
-    { path: "/recipes", label: "Рецепты" },
+    { path: "/classic-recipes", label: "Классические рецепты" },
+    { path: "/author-recipes", label: "Авторские рецепты" },
     { path: "/shop", label: "Магазин" },
     { path: "/contacts", label: "Контакты" },
   ];
@@ -54,7 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="bg-secondary border-t border-border mt-20">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-8">
             <div>
               <h3 className="text-lg font-bold text-primary mb-4">🍵 Мир Чая</h3>
               <p className="text-sm text-muted-foreground">
@@ -77,6 +78,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link to="/history" className="text-muted-foreground hover:text-primary">История</Link></li>
                 <li><Link to="/benefits" className="text-muted-foreground hover:text-primary">Польза</Link></li>
                 <li><Link to="/ceremony" className="text-muted-foreground hover:text-primary">Церемония</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Рецепты</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/classic-recipes" className="text-muted-foreground hover:text-primary">Классические</Link></li>
+                <li><Link to="/author-recipes" className="text-muted-foreground hover:text-primary">Авторские</Link></li>
               </ul>
             </div>
             <div>
