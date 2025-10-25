@@ -12,6 +12,9 @@ import BlackTea from "./pages/BlackTea";
 import WhiteTea from "./pages/WhiteTea";
 import Oolong from "./pages/Oolong";
 import Puer from "./pages/Puer";
+import ClassicRecipes from "./pages/ClassicRecipes";
+import AuthorRecipes from "./pages/AuthorRecipes";
+import RecipeDetail from "./pages/RecipeDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +34,9 @@ const App = () => (
           <Route path="/white-tea" element={<WhiteTea />} />
           <Route path="/oolong" element={<Oolong />} />
           <Route path="/puer" element={<Puer />} />
+          <Route path="/classic-recipes" element={<ClassicRecipes />} />
+          <Route path="/author-recipes" element={<AuthorRecipes />} />
+          <Route path="/recipe/:id" element={<RecipeDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
