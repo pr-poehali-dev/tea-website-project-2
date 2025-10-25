@@ -1,5 +1,4 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -379,8 +378,7 @@ const RecipeDetail = () => {
 
   if (!recipe) {
     return (
-      <div className="min-h-screen flex flex-col">
-        <Header />
+      <Layout>
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-primary mb-4">Рецепт не найден</h1>
@@ -389,14 +387,12 @@ const RecipeDetail = () => {
             </Link>
           </div>
         </main>
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-50 via-white to-amber-50">
-      <Header />
+    <Layout>
       
       <main className="flex-1 container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
@@ -502,9 +498,7 @@ const RecipeDetail = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
